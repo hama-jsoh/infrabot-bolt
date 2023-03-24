@@ -1,7 +1,8 @@
 FROM ubuntu:20.04
 ENV LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8
-ENV DEBIAN_FRONTEND=noninteractive
+    LC_ALL=C.UTF-8 \
+    DEBIAN_FRONTEND=noninteractive \
+    PYTHONPATH=/usr/local/lib/python3.9/dist-packages/pdm/pep582:$PYTHONPATH
 
 # apt-packages
 RUN sed -i "s/archive.ubuntu/mirror.kakao/g" /etc/apt/sources.list \
@@ -33,8 +34,7 @@ RUN ln -sf /usr/bin/python3.9 /usr/bin/python3 \
  && python3.9 -m pip cache purge
 
 RUN npm install -g yarn \
- && pdm --pep582 >> ~/.bash_profile \
- && . ~/.bash_profile
+ && pdm --pep582 >> ~/.bash_profile
 
 # localtime
 RUN locale-gen "en_US.UTF-8"
