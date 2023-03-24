@@ -32,7 +32,9 @@ RUN ln -sf /usr/bin/python3.9 /usr/bin/python3 \
  && python3.9 -m pip install pdm \
  && python3.9 -m pip cache purge
 
-RUN npm install -g yarn
+RUN npm install -g yarn \
+ && pdm --pep582 >> ~/.bash_profile \
+ && . ~/.bash_profile
 
 # localtime
 RUN locale-gen "en_US.UTF-8"
