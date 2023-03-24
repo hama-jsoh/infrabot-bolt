@@ -1,4 +1,3 @@
-from ._block import Block
 from ._element import Element
 
 

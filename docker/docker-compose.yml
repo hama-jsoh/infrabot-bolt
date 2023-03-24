@@ -1,0 +1,15 @@
+version: "3"
+services:
+  focal:
+    image: focal:0.0.1
+    container_name: focal
+    shm_size: "8gb"
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    volumes:
+      - ../:/Projects/
+    working_dir: /Projects/
+    network_mode: "host"
+    tty: true
+    restart: always
