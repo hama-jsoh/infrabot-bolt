@@ -2,10 +2,10 @@
 
 [project]
 name = "infrabot"
-version = "0.0.1"
+version = "0.1.0"
 description = ""
 authors = [
-    {name = "hama-jsoh", email = "juseok@hamagroups.io"},
+    {name = "juseok", email = ""},
 ]
 dependencies = []
 requires-python = ">=3.9"
