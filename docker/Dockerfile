@@ -34,7 +34,8 @@ RUN ln -sf /usr/bin/python${PYTHON_VER} /usr/bin/python3 \
  && python${PYTHON_VER} -m pip install pdm \
  && python${PYTHON_VER} -m pip cache purge
 
-RUN npm install -g yarn
+RUN npm install -g yarn \
+ && pdm config python.use_venv false
 
 # localtime
 RUN locale-gen "en_US.UTF-8"
