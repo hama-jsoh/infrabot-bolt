@@ -8,7 +8,7 @@ class Fields(Section):
         _fields = []
         for text in text_list:
             _field = dict(type="plain_text", emoji=True)
-            _field['text'] = text
+            _field["text"] = text
             _fields.append(_field)
         self.body = dict(type=self.type, fields=_fields)
 

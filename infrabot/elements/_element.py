@@ -15,8 +15,4 @@ class Element(metaclass=ABCMeta):
 
     @property
     def pretty(self) -> None:
-        return print(
-                json.dumps(
-                    self.body, ensure_ascii=False, indent=4
-                    )
-                )
+        return print(json.dumps(self.body, ensure_ascii=False, indent=4))

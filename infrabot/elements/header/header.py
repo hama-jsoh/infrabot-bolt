@@ -6,7 +6,4 @@ class Header(Element):
         super(Header, self).__init__()
         _type = "header"
         _text = dict(type="plain_text", text=text, emoji=True)
-        self.body = dict(
-            type=_type,
-            text=_text
-        )
+        self.body = dict(type=_type, text=_text)
