@@ -9,7 +9,7 @@ class StaticSelectInput(Input):
         _options = self.get_opts(opt_value)
         _element = dict(type=_type, options=_options, action_id="static-select-action")
         _label = dict(type="plain_text", text=title, emoji=True)
-        self.body = dict(type=self.type, element=_element, label=_lable)
+        self.body = dict(type=self.type, element=_element, label=_label)
 
     def get_opts(self, value: str) -> list:
         option_list = [
