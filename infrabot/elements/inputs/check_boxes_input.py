@@ -13,10 +13,10 @@ class CheckBoxInput(Input):
         _label = dict(type="plain_text", text=title, emoji=True)
 
         if not optional:
-            self.body = dict(type=self.type, element=_element, label=_lable)
+            self.body = dict(type=self.type, element=_element, label=_label)
         else:
             self.body = dict(
-                type=self.type, element=_element, label=_lable, optional=optional
+                type=self.type, element=_element, label=_label, optional=optional
             )
 
     def get_opts(self, value: str) -> list:

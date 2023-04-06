@@ -3,12 +3,11 @@ from ._input import Input
 
 class PlainTextInput(Input):
     def __init__(
-        self, title: str, text: list[str], multiline: bool = True, optional: bool = True
+        self, title: str, multiline: bool = True, optional: bool = True
     ) -> None:
         super(PlainTextInput, self).__init__()
-        _type = "plaintext"
+        _type = "plain_text_input"
         _label = dict(type="plain_text", text=title, emoji=True)
-        self.plaintext = text
 
         if not multiline:
             _element = dict(type=_type, action_id="plaintext-action")

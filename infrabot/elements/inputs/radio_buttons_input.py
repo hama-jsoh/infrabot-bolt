@@ -16,7 +16,7 @@ class RadioButtonInput(Input):
             self.body = dict(type=self.type, element=_element, label=_label)
         else:
             self.body = dict(
-                type=self.type, element=_element, label=_lable, optional=optional
+                type=self.type, element=_element, label=_label, optional=optional
             )
 
     def get_opts(self, value: str) -> list:
