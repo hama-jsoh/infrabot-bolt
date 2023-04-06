@@ -6,7 +6,7 @@ class Modal(Element):
         super(Modal, self).__init__()
         _type = "modal"
         _title = dict(type="plain_text", text=title, emoji=True)
-        _submit = dict(type="plain_text", text="submit", emoji=True)
+        _submit = dict(type="plain_text", text="Submit", emoji=True)
         _close = dict(type="plain_text", text="Cancel", emoji=True)
         _blocks = list(block.body.values())[0]
 
