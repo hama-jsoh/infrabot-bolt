@@ -15,7 +15,7 @@ class PlainTextInput(Input):
             _element = dict(type=_type, multiline=multiline)
 
         if not optional:
-            self.body = dict(type=self.type, element=_element, label=_lable)
+            self.body = dict(type=self.type, element=_element, label=_label)
         else:
             self.body = dict(
                 type=self.type, element=_element, label=_lable, optional=optional
