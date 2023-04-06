@@ -10,8 +10,8 @@ if __name__ == "__main__":
     view = Modal(
         "My App",
         Blocks(
-            StaticSelectInput("Repository", ['project-admin', 'project-web', 'project-api'], "repo"),
-            StaticSelectInput("Branch", ['master', 'develop', 'beta'], "branch"),
+            StaticSelectInput("Repository", "Select a repo", ['project-admin', 'project-web', 'project-api'], "repo"),
+            StaticSelectInput("Branch", "Select a branch", ['master', 'develop', 'beta'], "branch"),
             RadioButtonInput("Type", ['prod', 'dev'], "type", optional=True),
             CheckBoxInput("Stage", ['CodeBuild', 'CodeDeploy'], "stage", optional=True),
             CheckBoxInput("Auto Scaling Group", ['Exist'], "asg", optional=True),
